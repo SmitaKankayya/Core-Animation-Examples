@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O3K-nX-qwh">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Yar-3l-mJh">
+            <objects>
+                <navigationController id="O3K-nX-qwh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ph8-Om-q3Q">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jSh-kz-Swf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ls0-qm-2N5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="4"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-7d-UdC">
+                                <rect key="frame" x="0.0" y="108" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Core Animation Intro" id="Ti5-1F-Cke"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-Dx-OUN">
+                                <rect key="frame" x="0.0" y="152" width="393" height="700"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" id="cjj-jQ-RQx">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cjj-jQ-RQx" id="kWL-i8-Zy1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ij6-Dx-OUN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Xf-bH-FEv"/>
+                            <constraint firstItem="Ij6-Dx-OUN" firstAttribute="top" secondItem="Awf-7d-UdC" secondAttribute="bottom" id="6Jy-2W-nGd"/>
+                            <constraint firstItem="Awf-7d-UdC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H3m-AP-bnT"/>
+                            <constraint firstItem="Ij6-Dx-OUN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ITv-SX-fGz"/>
+                            <constraint firstAttribute="bottom" secondItem="Ij6-Dx-OUN" secondAttribute="bottom" id="Nw0-DS-9Zc"/>
+                            <constraint firstItem="Awf-7d-UdC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="QMn-bg-3CX"/>
+                            <constraint firstAttribute="trailing" secondItem="Awf-7d-UdC" secondAttribute="trailing" id="wnz-Tp-NqG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Ou-RY-eOT"/>
+                    <connections>
+                        <outlet property="animationTableView" destination="Ij6-Dx-OUN" id="05x-qR-u3N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="4"/>
+        </scene>
+        <!--Move View Controller-->
+        <scene sceneID="GfV-Ax-psW">
+            <objects>
+                <viewController storyboardIdentifier="MoveViewController" id="C5P-zq-gmb" customClass="MoveViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1I-Dk-FZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6a-Tg-nUC">
+                                <rect key="frame" x="20" y="100" width="140" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="b4Z-cA-kvx"/>
+                                    <constraint firstAttribute="width" constant="140" id="ekr-C4-fj4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSR-DT-ln1">
+                                <rect key="frame" x="153.33333333333334" y="650" width="86.666666666666657" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dao-of-qhN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ska-63-1VT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Animate"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="C5P-zq-gmb" eventType="touchUpInside" id="75k-1i-mPk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yke-nM-jqm"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X6a-Tg-nUC" firstAttribute="top" secondItem="yke-nM-jqm" secondAttribute="top" constant="41" id="CG9-VH-wdg"/>
+                            <constraint firstItem="zSR-DT-ln1" firstAttribute="top" secondItem="X6a-Tg-nUC" secondAttribute="bottom" constant="450" id="X1W-XS-1c8"/>
+                            <constraint firstItem="X6a-Tg-nUC" firstAttribute="leading" secondItem="yke-nM-jqm" secondAttribute="leading" constant="20" id="XKm-8k-LKh"/>
+                            <constraint firstItem="zSR-DT-ln1" firstAttribute="centerX" secondItem="B1I-Dk-FZJ" secondAttribute="centerX" id="XzL-XK-59g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="X6a-Tg-nUC" id="qKi-t5-zxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NH3-qV-AJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="4"/>
+        </scene>
+        <!--Scale View Controller-->
+        <scene sceneID="LmB-bB-Oje">
+            <objects>
+                <viewController storyboardIdentifier="ScaleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cEr-jM-yQB" customClass="ScaleViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TgS-7m-6zl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-7z-EL3">
+                                <rect key="frame" x="126.66666666666669" y="376" width="140" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="ZAG-2H-mrP"/>
+                                    <constraint firstAttribute="height" constant="100" id="puy-34-yNe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq7-Vo-Sbf">
+                                <rect key="frame" x="153.33333333333334" y="701" width="86.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Animate"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="cEr-jM-yQB" eventType="touchUpInside" id="oSm-xJ-dtr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ttq-QU-yXc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Ih-7z-EL3" firstAttribute="centerX" secondItem="TgS-7m-6zl" secondAttribute="centerX" id="3YC-qG-zPD"/>
+                            <constraint firstItem="9Ih-7z-EL3" firstAttribute="centerY" secondItem="TgS-7m-6zl" secondAttribute="centerY" id="OSX-Ss-teb"/>
+                            <constraint firstItem="Sq7-Vo-Sbf" firstAttribute="top" secondItem="9Ih-7z-EL3" secondAttribute="bottom" constant="225" id="ruA-cL-23o"/>
+                            <constraint firstItem="Sq7-Vo-Sbf" firstAttribute="centerX" secondItem="TgS-7m-6zl" secondAttribute="centerX" id="vKZ-Z4-pfh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="9Ih-7z-EL3" id="NUY-f6-fpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSw-Zs-hwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="4"/>
+        </scene>
+        <!--Rotate View Controller-->
+        <scene sceneID="Wk7-TH-u1w">
+            <objects>
+                <viewController storyboardIdentifier="RotateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G2Q-2T-r87" customClass="RotateViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9WY-dr-fs5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Got-qS-uuW">
+                                <rect key="frame" x="126.66666666666669" y="376" width="140" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Qaw-1a-Hjo"/>
+                                    <constraint firstAttribute="width" constant="140" id="rgP-hc-L6f"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyS-Dg-Gh7">
+                                <rect key="frame" x="153.33333333333334" y="701" width="86.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Animate"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="G2Q-2T-r87" eventType="touchUpInside" id="gZV-vQ-ObQ"/>
+                                    <action selector="buttonTapped:" destination="cEr-jM-yQB" eventType="touchUpInside" id="wiE-26-aq5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Znm-zk-MnB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Got-qS-uuW" firstAttribute="centerX" secondItem="9WY-dr-fs5" secondAttribute="centerX" id="BSp-L1-rQB"/>
+                            <constraint firstItem="Got-qS-uuW" firstAttribute="centerY" secondItem="9WY-dr-fs5" secondAttribute="centerY" id="alf-xk-SIF"/>
+                            <constraint firstItem="IyS-Dg-Gh7" firstAttribute="top" secondItem="Got-qS-uuW" secondAttribute="bottom" constant="225" id="cOS-LQ-NNQ"/>
+                            <constraint firstItem="IyS-Dg-Gh7" firstAttribute="centerX" secondItem="9WY-dr-fs5" secondAttribute="centerX" id="mJm-Ly-m9K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="Got-qS-uuW" id="2eB-TJ-vkM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ul9-j8-xsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="4"/>
+        </scene>
+        <!--Shake View Controller-->
+        <scene sceneID="wV5-AA-CWE">
+            <objects>
+                <viewController storyboardIdentifier="ShakeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1xE-Cb-4Rg" customClass="ShakeViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRx-dy-XxW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Mt-Ln-bPT">
+                                <rect key="frame" x="126.66666666666669" y="232" width="140" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="CmR-EV-Hcy"/>
+                                    <constraint firstAttribute="height" constant="100" id="gf1-3j-BXP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxX-qA-gP5">
+                                <rect key="frame" x="161" y="677" width="71" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Shake"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="1xE-Cb-4Rg" eventType="touchUpInside" id="HZQ-bv-t1V"/>
+                                    <action selector="buttonTapped:" destination="G2Q-2T-r87" eventType="touchUpInside" id="alK-Xb-PSN"/>
+                                    <action selector="buttonTapped:" destination="cEr-jM-yQB" eventType="touchUpInside" id="zWf-yI-Hhm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0oT-lJ-jQr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xxX-qA-gP5" firstAttribute="centerX" secondItem="DRx-dy-XxW" secondAttribute="centerX" id="Ac2-J5-EtJ"/>
+                            <constraint firstItem="xxX-qA-gP5" firstAttribute="top" secondItem="7Mt-Ln-bPT" secondAttribute="bottom" constant="345" id="Az3-UD-QlG"/>
+                            <constraint firstItem="7Mt-Ln-bPT" firstAttribute="centerX" secondItem="DRx-dy-XxW" secondAttribute="centerX" id="eda-xS-q2f"/>
+                            <constraint firstItem="7Mt-Ln-bPT" firstAttribute="top" secondItem="0oT-lJ-jQr" secondAttribute="top" constant="173" id="nOy-x9-lNu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="7Mt-Ln-bPT" id="y6m-ej-2DF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhM-KY-i97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3109" y="4"/>
+        </scene>
+        <!--Circling View Controller-->
+        <scene sceneID="vyD-mh-BwP">
+            <objects>
+                <viewController storyboardIdentifier="CirclingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MHi-Xs-h9B" customClass="CirclingViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GoC-b5-QNK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgq-it-8R4">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="X7H-G0-3ix"/>
+                                    <constraint firstAttribute="width" constant="300" id="nud-uk-Yjk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr3-Wv-rqF">
+                                <rect key="frame" x="153" y="708" width="87" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Animate"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="MHi-Xs-h9B" eventType="touchUpInside" id="0gw-Ed-Ze6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRV-uH-ywo">
+                                <rect key="frame" x="176.66666666666666" y="406" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ddh-wx-ujd"/>
+                                    <constraint firstAttribute="width" constant="40" id="MER-sS-nzv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eSu-MU-Pcy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lgq-it-8R4" firstAttribute="centerX" secondItem="GoC-b5-QNK" secondAttribute="centerX" id="1tm-tK-Raa"/>
+                            <constraint firstItem="TRV-uH-ywo" firstAttribute="centerX" secondItem="GoC-b5-QNK" secondAttribute="centerX" id="DBH-2l-ScU"/>
+                            <constraint firstItem="TRV-uH-ywo" firstAttribute="centerY" secondItem="lgq-it-8R4" secondAttribute="centerY" id="H5C-j5-rcS"/>
+                            <constraint firstItem="lgq-it-8R4" firstAttribute="centerY" secondItem="GoC-b5-QNK" secondAttribute="centerY" id="a2p-v1-Dhu"/>
+                            <constraint firstItem="Mr3-Wv-rqF" firstAttribute="centerX" secondItem="GoC-b5-QNK" secondAttribute="centerX" id="a4a-R3-1Fm"/>
+                            <constraint firstItem="Mr3-Wv-rqF" firstAttribute="top" secondItem="lgq-it-8R4" secondAttribute="bottom" constant="132" id="psN-eo-u4K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="redCircle" destination="lgq-it-8R4" id="gSx-s0-qJE"/>
+                        <outlet property="redView" destination="TRV-uH-ywo" id="Ula-Wq-gT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8E-G0-ycA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3810" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
